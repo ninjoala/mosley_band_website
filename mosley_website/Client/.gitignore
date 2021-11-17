@@ -1,0 +1,17 @@
+﻿Bin
+bin
+Obj
+obj
+debug
+Debug
+*.suo
+*.user
+*.ps1
+*.map
+*.nupkg
+/packages
+/.vs
+*/wwwroot/lib
+*/Debug
+*/obj
+*/bin
