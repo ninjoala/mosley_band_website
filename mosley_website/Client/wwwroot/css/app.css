@@ -4,6 +4,23 @@ html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+a.nav-link.active {
+    background-color: #dd5f37;
+    color: black;
+}
+
+.mosley-nav {
+    background-color: #32513f;
+}
+
+a.nav-link, a.navbar-brand {
+    color: white;
+}
+
+ul.navbar-nav a:hover {
+    color: black !important;
+}
+
 a, .btn-link {
     color: #0366d6;
 }
@@ -42,9 +59,40 @@ a, .btn-link {
     z-index: 1000;
 }
 
-    #blazor-error-ui .dismiss {
-        cursor: pointer;
-        position: absolute;
-        right: 0.75rem;
-        top: 0.5rem;
-    }
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+.carousel {
+    
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+}
+
+.test-div {
+}
+
+#carousel-border {
+    background: blue;
+    color: white;
+}
+
+li.has-submenu {
+    position: relative;
+}
+
+.sub-menu {
+    border-style: solid;
+    border-width: 2px;
+    background-color: dimgrey;
+    position: absolute;
+}
+
+
+

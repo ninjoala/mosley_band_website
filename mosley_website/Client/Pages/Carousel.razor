@@ -1,7 +1,9 @@
 ﻿@page "/carousel"
+@inherits MosleyComponentBase;
+
 @using System.Threading;
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel container center" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="@firstSlideCss"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1" class="@secondSlideCss"></li>
@@ -50,7 +52,7 @@
     {
         while (!ct.IsCancellationRequested)
         {
-            await Task.Delay(2500, ct);
+            await Task.Delay(5000, ct);
             currentPosition++;
             ChangeSlide();
             await InvokeAsync(() => this.StateHasChanged());

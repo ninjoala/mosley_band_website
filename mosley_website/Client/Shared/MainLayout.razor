@@ -1,9 +1,36 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager MyNavigationManager
 
+@using mosley_website.Client.Pages;
 <body>
-    <NavMenu />
-
-    <div class="container body" style="padding-top:60px;">
+<CascadingValue Value=PageLoad>
+    <CascadingValue Value="ShowSubMenu">
+        <CascadingValue Value="IsEnsembleActive">
+            <NavMenu />
+        </CascadingValue>
+    <div style="padding-top:56px;">
         @Body
-    </div>
+    </div>    
+    </CascadingValue>
+</CascadingValue>
 </body>
+
+@code {
+    public EventCallback PageLoad => EventCallback.Factory.Create(this, PageLoadCallback);
+
+    private bool IsEnsembleActive { get; set; }
+    private bool ShowSubMenu { get; set; }
+
+    public void PageLoadCallback()
+    {
+        if (MyNavigationManager.Uri.Contains("Ensemble"))
+        {
+            IsEnsembleActive = true;
+        }
+        else
+        {
+            IsEnsembleActive = false;
+        }
+        ShowSubMenu = false;
+    }
+}

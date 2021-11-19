@@ -1,23 +1,56 @@
-﻿<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3 fixed-top">
+﻿@using mosley_website.Client.Pages
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm box-shadow mb-3 fixed-top mosley-nav">
     <div class="container">
-        <a class="navbar-brand text-light" href="">Mosley Website</a>
+        <a class="navbar-brand" href="">Mosley Website</a>
         <div class=" navbar-collapse d-sm-inline-flex flex-sm-row-reverse">
-            <ul class="navbar-nav flex-grow-1">
+            <ul class="navbar-nav flex-grow-1">               
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/Calendar" Match="NavLinkMatch.All">Calendar</a>
+                    <NavLink class="nav-link" href="/Staff" Match="NavLinkMatch.All">Staff</NavLink>
+                </li>
+                <li class="nav-item has-submenu">
+                    @if (IsEnsembleActive)
+                    {
+                        <NavLink class="nav-link active" Match="NavLinkMatch.Prefix" @onclick=ToggleSubMenu >Ensembles</NavLink>
+                    }
+                    else
+                    {
+                        <NavLink class="nav-link" Match="NavLinkMatch.Prefix" @onclick=ToggleSubMenu >Ensembles</NavLink>
+                    }
+                    <CascadingValue Value=ShowSubMenu>
+                        <SubMenu OnCloseButtonClick=@ToggleSubMenu/>
+                    </CascadingValue>
+                </li>
+               <li class="nav-item">
+                    <NavLink class="nav-link" href="/Resources" Match="NavLinkMatch.All">Resources</NavLink>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/Documents" Match="NavLinkMatch.All">Documents</a>
+                    <NavLink class="nav-link" href="/Boosters" Match="NavLinkMatch.All">Boosters</NavLink>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/AboutUs" Match="NavLinkMatch.All">About Us</a>
+                    <NavLink class="nav-link" href="/Calendar" Match="NavLinkMatch.All">Calendar</NavLink>
+                </li> 
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="/CutTime" Match="NavLinkMatch.All">CutTime</NavLink>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/carousel" Match="NavLinkMatch.All">carousel</a>
+                    <NavLink class="nav-link" href="/Support" Match="NavLinkMatch.All">Support The Band</NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="/College" Match="NavLinkMatch.All">College Band</NavLink>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
+@code {
+    [CascadingParameter]
+    private bool IsEnsembleActive { get; set; }
+    [CascadingParameter]
+    private bool ShowSubMenu { get; set; }
 
+    public void ToggleSubMenu()
+    {
+        ShowSubMenu = !ShowSubMenu;
+    }
+}
