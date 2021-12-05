@@ -3,16 +3,16 @@
 
 @using mosley_website.Client.Pages;
 <body>
-<CascadingValue Value=PageLoad>
-    <CascadingValue Value="ShowSubMenu">
-        <CascadingValue Value="IsEnsembleActive">
-            <NavMenu />
+    <CascadingValue Value=PageLoad>
+        <CascadingValue Value="ShowSubMenu">
+            <CascadingValue Value="IsEnsembleActive">
+                <NavMenu />
+            </CascadingValue>
+        <main style="padding-top:56px;">
+            @Body
+        </main>    
         </CascadingValue>
-    <div style="padding-top:56px;">
-        @Body
-    </div>    
     </CascadingValue>
-</CascadingValue>
 </body>
 
 @code {
