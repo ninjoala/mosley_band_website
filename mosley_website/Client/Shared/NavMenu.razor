@@ -1,46 +1,56 @@
 ﻿@using mosley_website.Client.Pages
-<nav class="navbar navbar-expand-sm navbar-toggleable-sm box-shadow mb-3 fixed-top mosley-nav">
-    <div class="container">
-        <a class="navbar-brand" href="">Mosley Website</a>
-        <div class=" navbar-collapse d-sm-inline-flex flex-sm-row-reverse">
-            <ul class="navbar-nav flex-grow-1">               
-                <li class="nav-item">
-                    <NavLink class="nav-link" href="/Staff" Match="NavLinkMatch.All">Staff</NavLink>
-                </li>
-                <li class="nav-item has-submenu">
-                    @if (IsEnsembleActive)
-                    {
-                        <NavLink class="nav-link active" Match="NavLinkMatch.Prefix" @onclick=ToggleSubMenu >Ensembles</NavLink>
-                    }
-                    else
-                    {
-                        <NavLink class="nav-link" Match="NavLinkMatch.Prefix" @onclick=ToggleSubMenu >Ensembles</NavLink>
-                    }
-                    <CascadingValue Value=ShowSubMenu>
-                        <SubMenu OnCloseButtonClick=@ToggleSubMenu/>
-                    </CascadingValue>
-                </li>
-               <li class="nav-item">
-                    <NavLink class="nav-link" href="/Resources" Match="NavLinkMatch.All">Resources</NavLink>
-                </li>
-                <li class="nav-item">
-                    <NavLink class="nav-link" href="/Boosters" Match="NavLinkMatch.All">Boosters</NavLink>
-                </li>
-                <li class="nav-item">
-                    <NavLink class="nav-link" href="/Calendar" Match="NavLinkMatch.All">Calendar</NavLink>
-                </li> 
-                <li class="nav-item">
-                    <NavLink class="nav-link" href="/CutTime" Match="NavLinkMatch.All">CutTime</NavLink>
-                </li>
-                <li class="nav-item">
-                    <NavLink class="nav-link" href="/Support" Match="NavLinkMatch.All">Support The Band</NavLink>
-                </li>
-                <li class="nav-item">
-                    <NavLink class="nav-link" href="/College" Match="NavLinkMatch.All">College Band</NavLink>
-                </li>
-            </ul>
-        </div>
-    </div>
+
+<nav class="navbar">
+    <ul class="navbar-nav">             
+        <li class="logo nav-item">
+            <a href="#" class="nav-link">Mosley</a>
+        </li>           
+        <li class="nav-item">
+            <NavLink class="nav-link" href="/Staff" Match="NavLinkMatch.All">Staff</NavLink>
+        </li>
+@*        <li class="nav-item has-submenu">
+            @if (IsEnsembleActive)
+            {
+            <NavLink class="nav-link active" Match="NavLinkMatch.Prefix" @onclick=ToggleSubMenu >Ensembles</NavLink>
+            }
+            else
+            {
+            <NavLink class="nav-link" Match="NavLinkMatch.Prefix" @onclick=ToggleSubMenu >Ensembles</NavLink>
+            }
+            <CascadingValue Value=ShowSubMenu>
+                <SubMenu OnCloseButtonClick=@ToggleSubMenu/>
+            </CascadingValue>
+        </li>*@
+             <li class="nav-item">
+                 <div class="dropdown">
+                    <NavLink class="nav-link" Match="NavLinkMatch.All">Ensembles</NavLink>
+                    <div class="dropdown-content">
+                        <a class="nav-link dropdown-item" href="/Ensembles/Sotsl">Sound of the Southland</a>
+                        <a class="nav-link dropdown-item" href="/Ensembles/SymphonyBand">Symphony Band</a>
+                        <a class="nav-link dropdown-item" href="/Ensembles/SymphonicBand">Symphonic Band</a>
+                        <a class="nav-link dropdown-item" href="/Ensembles/Jazz">Jazz Ensemble</a>
+                        <a class="nav-link dropdown-item" href="/Ensembles/Percussion">Percussion</a>
+                        <a class="nav-link dropdown-item" href="/Ensembles/Colorguard">Colorguard</a>
+                    </div>
+                 </div>
+            </li>
+        <li class="nav-item">
+            <div class="dropdown">
+                <NavLink class="nav-link" href="/Resources" Match="NavLinkMatch.All">Resources</NavLink>
+                <div class="dropdown-content">
+                    <NavLink class="nav-link dropdown-item" href="/Calendar" Match="NavLinkMatch.All">Calendar</NavLink>
+                    <NavLink class="nav-link dropdown-item" href="/CutTime" Match="NavLinkMatch.All">CutTime</NavLink>
+                    <NavLink class="nav-link dropdown-item" href="/Boosters" Match="NavLinkMatch.All">Boosters</NavLink>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item">
+            <NavLink class="nav-link" href="/Support" Match="NavLinkMatch.All">Support</NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink class="nav-link" href="/College" Match="NavLinkMatch.All">College</NavLink>
+        </li>
+    </ul>
 </nav>
 
 @code {
