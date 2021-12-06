@@ -1,34 +1,30 @@
 ﻿@using mosley_website.Client.Pages
 
 <nav class="navbar">
-    <ul class="navbar-nav">             
+    <ul class="navbar-nav">
         <li class="logo nav-item">
             <a href="#" class="nav-link">Mosley</a>
-        </li>           
+        </li>
         <li class="nav-item">
             <NavLink class="nav-link" href="/Staff" Match="NavLinkMatch.All">Staff</NavLink>
         </li>
-             <li class="nav-item">
-                 <div class="dropdown">
-                    <NavLink class="nav-link" Match="NavLinkMatch.All">Ensembles</NavLink>
-                    <div class="dropdown-content">
-                        <a class="nav-link dropdown-item" href="/Ensembles/Sotsl">Sound of the Southland</a>
-                        <a class="nav-link dropdown-item" href="/Ensembles/SymphonyBand">Symphony Band</a>
-                        <a class="nav-link dropdown-item" href="/Ensembles/SymphonicBand">Symphonic Band</a>
-                        <a class="nav-link dropdown-item" href="/Ensembles/Jazz">Jazz Ensemble</a>
-                        <a class="nav-link dropdown-item" href="/Ensembles/Percussion">Percussion</a>
-                        <a class="nav-link dropdown-item" href="/Ensembles/Colorguard">Colorguard</a>
-                    </div>
-                 </div>
-            </li>
-        <li class="nav-item">
-            <div class="dropdown">
-                <NavLink class="nav-link" href="/Resources" Match="NavLinkMatch.All">Resources</NavLink>
-                <div class="dropdown-content">
-                    <NavLink class="nav-link dropdown-item" href="/Calendar" Match="NavLinkMatch.All">Calendar</NavLink>
-                    <NavLink class="nav-link dropdown-item" href="/CutTime" Match="NavLinkMatch.All">CutTime</NavLink>
-                    <NavLink class="nav-link dropdown-item" href="/Boosters" Match="NavLinkMatch.All">Boosters</NavLink>
-                </div>
+        <li class="nav-item dropdown">
+            <NavLink class="nav-link" Match="NavLinkMatch.All">Ensembles</NavLink>
+            <div class="dropdown-content">
+                <a class="nav-link dropdown-item" href="/Ensembles/Sotsl">Sound of the Southland</a>
+                <a class="nav-link dropdown-item" href="/Ensembles/SymphonyBand">Symphony Band</a>
+                <a class="nav-link dropdown-item" href="/Ensembles/SymphonicBand">Symphonic Band</a>
+                <a class="nav-link dropdown-item" href="/Ensembles/Jazz">Jazz Ensemble</a>
+                <a class="nav-link dropdown-item" href="/Ensembles/Percussion">Percussion</a>
+                <a class="nav-link dropdown-item" href="/Ensembles/Colorguard">Colorguard</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <NavLink class="nav-link" href="/Resources" Match="NavLinkMatch.All">Resources</NavLink>
+            <div class="dropdown-content">
+                <NavLink class="nav-link dropdown-item" href="/Calendar" Match="NavLinkMatch.All">Calendar</NavLink>
+                <NavLink class="nav-link dropdown-item" href="/CutTime" Match="NavLinkMatch.All">CutTime</NavLink>
+                <NavLink class="nav-link dropdown-item" href="/Boosters" Match="NavLinkMatch.All">Boosters</NavLink>
             </div>
         </li>
         <li class="nav-item">
