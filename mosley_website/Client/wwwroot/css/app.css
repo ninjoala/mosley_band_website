@@ -18,6 +18,19 @@ body {
     padding: 0;
 }
 
+img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.page-header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 2rem;
+}
+
 main {
     background-color: white;
     padding-top: 1rem;

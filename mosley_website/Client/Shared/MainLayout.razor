@@ -3,34 +3,9 @@
 
 @using mosley_website.Client.Pages;
 <body>
-    <CascadingValue Value=PageLoad>
-        <CascadingValue Value="ShowSubMenu">
-            <CascadingValue Value="IsEnsembleActive">
-                <NavMenu />
-            </CascadingValue>
-        <main>
-            @Body
-        </main>    
-        </CascadingValue>
-    </CascadingValue>
+    <NavMenu />
+    <main>
+        @Body
+    </main>    
 </body>
 
-@code {
-    public EventCallback PageLoad => EventCallback.Factory.Create(this, PageLoadCallback);
-
-    private bool IsEnsembleActive { get; set; }
-    private bool ShowSubMenu { get; set; }
-
-    public void PageLoadCallback()
-    {
-        if (MyNavigationManager.Uri.Contains("Ensemble"))
-        {
-            IsEnsembleActive = true;
-        }
-        else
-        {
-            IsEnsembleActive = false;
-        }
-        ShowSubMenu = false;
-    }
-}

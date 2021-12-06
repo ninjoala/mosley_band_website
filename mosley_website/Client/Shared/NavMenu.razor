@@ -8,19 +8,6 @@
         <li class="nav-item">
             <NavLink class="nav-link" href="/Staff" Match="NavLinkMatch.All">Staff</NavLink>
         </li>
-@*        <li class="nav-item has-submenu">
-            @if (IsEnsembleActive)
-            {
-            <NavLink class="nav-link active" Match="NavLinkMatch.Prefix" @onclick=ToggleSubMenu >Ensembles</NavLink>
-            }
-            else
-            {
-            <NavLink class="nav-link" Match="NavLinkMatch.Prefix" @onclick=ToggleSubMenu >Ensembles</NavLink>
-            }
-            <CascadingValue Value=ShowSubMenu>
-                <SubMenu OnCloseButtonClick=@ToggleSubMenu/>
-            </CascadingValue>
-        </li>*@
              <li class="nav-item">
                  <div class="dropdown">
                     <NavLink class="nav-link" Match="NavLinkMatch.All">Ensembles</NavLink>
@@ -52,15 +39,3 @@
         </li>
     </ul>
 </nav>
-
-@code {
-    [CascadingParameter]
-    private bool IsEnsembleActive { get; set; }
-    [CascadingParameter]
-    private bool ShowSubMenu { get; set; }
-
-    public void ToggleSubMenu()
-    {
-        ShowSubMenu = !ShowSubMenu;
-    }
-}
