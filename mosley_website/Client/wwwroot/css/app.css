@@ -35,6 +35,40 @@ img {
     position: relative;
 }
 
+
+#home-banner {
+    background-image: url(/images/homebanner.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 26.56%; /* (img-height / img-width * container-width) */
+    /* (853 / 1280 * 100) */
+    position: relative;
+}
+
+.generic-banner {
+    background-color: var(--color-primary);
+    width: 100%;
+    height: 6rem;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.generic-banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    color: white;
+    z-index: 1;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+
 .banner-content {
     position: absolute;
     top: 50%;
@@ -43,6 +77,8 @@ img {
     justify-content: center;
     color: white;
     z-index: 1;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 /*.page-header {
