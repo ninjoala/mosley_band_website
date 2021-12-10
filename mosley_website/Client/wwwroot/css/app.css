@@ -51,7 +51,7 @@ img {
     position: relative;
     height: 6rem;
     background-color: var(--color-primary);
-    padding-inline: 20rem;
+    padding-inline: 25rem;
 }
 
 .generic-banner {
@@ -132,8 +132,8 @@ main {
 
 .page-wrapper {
     padding-top: 1rem;
-    margin-right: 5rem;
-    margin-left: 5rem;
+    margin-right: 25rem;
+    margin-left: 25rem;
 }
 
 .navbar {
@@ -289,6 +289,28 @@ li.has-submenu {
     border-width: 2px;
     background-color: dimgrey;
     position: absolute;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+article {
+    border-width: medium;
+    max-width: 70ch;
+    border-top-style: solid;
+    border-width: 2px;
+    border-color: var(--color-secondary);
+    padding-top: 1rem;
+}
+
+h2 {
+    font-size: 50px;
+    margin-bottom: 0.25rem;
 }
 
 
