@@ -51,25 +51,22 @@ img {
     position: relative;
     height: 6rem;
     background-color: var(--color-primary);
-    width: 100%;
+    padding-inline: 20rem;
 }
 
 .generic-banner {
-    display: grid;
-    grid-template: "1fr 1fr";
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
     height: 100%;
     z-index: 1;
 }
 
 .generic-banner-content {
-    flex-wrap: nowrap;
     color: white;
     z-index: 2;
     font-size: 25px;
     font-weight: bold;
-    margin-left: 10rem;
 }
 
 .generic-banner-button-wrapper {
@@ -79,19 +76,16 @@ img {
     z-index: 3;
     font-size: 20px;
     font-weight: bold;
-    border: solid;
-    border-color: whitesmoke;
-    border-width: 4px;
+    outline: solid;
+    outline-color: whitesmoke;
+    outline-width: 4px;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: background-color var(--transition-speed)
+    transition: background-color var(--transition-speed);
+    cursor: pointer;
 }
 
-.generic-banner-button-wrapper > a {
+button.generic-banner-button-wrapper {
     text-decoration: none;
     color: white;
     transition: color var(--transition-speed);
@@ -101,10 +95,16 @@ img {
     background-color: whitesmoke;
 }
 
-.generic-banner-button-wrapper:hover > a {
+button.generic-banner-button-wrapper:hover {
     color: var(--color-secondary);
 }
 
+button {
+    font-size: 100%;
+    font-family: inherit;
+    border: 0;
+    padding: 0;
+}
 
 
 .banner-content {

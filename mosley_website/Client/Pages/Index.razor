@@ -14,11 +14,9 @@
         <div class="generic-banner-content">
             Show your support for the Mosley Band.
         </div>
-        <div class="generic-banner-button-wrapper button-column">
-            <a href="/Staff">
-                Donate Now!
-            </a>
-        </div>
+        <button class="generic-banner-button-wrapper" @onclick=NavigateToSupport>
+            Donate Now!
+        </button>
     </div>
 </div>
 
@@ -29,4 +27,12 @@
 @code {
     [Parameter]
     public EventCallback TestEventCallback { get; set; }
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
+
+    public void NavigateToSupport()
+    {
+        NavigationManager.NavigateTo("Support");
+    }
+
 }
