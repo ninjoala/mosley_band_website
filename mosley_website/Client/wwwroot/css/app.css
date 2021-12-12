@@ -18,11 +18,12 @@ body {
     padding: 0;
 }
 
-img {
+/*img {
+/*img {
     object-fit: cover;
     width: 100%;
     height: auto;
-}
+}*/
 
 .page-banner {
     background-image: url(/images/banner.jpg);
@@ -51,7 +52,9 @@ img {
     position: relative;
     height: 6rem;
     background-color: var(--color-primary);
-    padding-inline: 25rem;
+    padding-inline: 17vw;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .generic-banner {
@@ -138,10 +141,15 @@ main {
     background-color: white;
 }
 
-.page-wrapper {
-    padding-top: 1rem;
-    margin-right: 25rem;
-    margin-left: 25rem;
+.article {
+    padding-inline: 17vw;
+}
+
+.article-wrapper {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .navbar {
@@ -300,7 +308,7 @@ li.has-submenu {
 }
 
 .w-50 {
-    width: 50%;
+    min-width: 50%;
 }
 
 .w-100 {
@@ -319,6 +327,7 @@ article {
 h2 {
     font-size: 50px;
     margin-bottom: 0.25rem;
+    margin-top: 0;
 }
 
 
