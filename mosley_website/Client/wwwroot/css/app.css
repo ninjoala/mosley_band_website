@@ -1,8 +1,8 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Varela+Round&display=swap');
 :root {
     font-size: 16px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Varela Round', sans-serif;
     --transition-speed: 300ms;
     --color-primary: #38543c;
     --color-secondary: #da5b33;
@@ -18,13 +18,6 @@ body {
     padding: 0;
 }
 
-/*img {
-/*img {
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-}*/
-
 .page-banner {
     background-image: url(/images/banner.jpg);
     background-size: contain;
@@ -35,7 +28,6 @@ body {
     /* (853 / 1280 * 100) */
     position: relative;
 }
-
 
 #home-banner {
     background-image: url(/images/homepagebanner.jpg);
@@ -150,6 +142,38 @@ main {
     padding-bottom: 5rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.article-header {
+    grid-area: header;
+    place-self: end start;
+}
+
+.article-content {
+    grid-area: content;
+}
+
+.article-logo {
+    grid-area: logo;
+    place-self: center end;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header header logo"
+        "content content logo"
+        "content content logo";
+}
+
+article {
+    place-self: start;
 }
 
 .navbar {
@@ -328,6 +352,7 @@ h2 {
     font-size: 50px;
     margin-bottom: 0.25rem;
     margin-top: 0;
+    font-family: 'Bebas Neue', cursive;
 }
 
 
@@ -355,6 +380,14 @@ h2 {
 
     main {
         margin: 0;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr
+    }
+
+    .article-logo {
+        display: none;
     }
 }
 
