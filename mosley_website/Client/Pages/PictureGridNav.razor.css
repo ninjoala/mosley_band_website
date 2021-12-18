@@ -45,7 +45,7 @@
 .img-thing {
     justify-self: center;
     align-self: start;
-    padding-top: 3rem;
+    margin-top: 7vh;
     z-index: 1;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .end-center {
-    margin-bottom: 3rem;
+    margin-bottom: 8vh;
     justify-self: center;
     align-self: end;
 }
