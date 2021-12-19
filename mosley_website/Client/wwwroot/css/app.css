@@ -158,6 +158,7 @@ main {
 
 .article-content {
     grid-area: content;
+    font-size: 1.35rem;
 }
 
 .article-logo {
@@ -352,7 +353,7 @@ article {
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 3.5rem;
     margin-bottom: 0.25rem;
     margin-top: 0;
     font-family: 'Bebas Neue', cursive;
