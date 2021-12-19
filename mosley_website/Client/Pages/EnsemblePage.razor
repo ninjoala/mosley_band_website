@@ -1,0 +1,20 @@
+﻿@page "/Ensembles/{EnsembleName}"
+
+@inherits EnsemblePageBase;
+
+@if (!Loading)
+{
+    <h1>@EnsembleName</h1>
+
+    <p>@Blurb</p>
+
+    <article>@Article</article>
+
+    <p>@PicturePath</p>
+}
+
+@*<img src=@PicturePath />
+*@
+@code {
+
+}
