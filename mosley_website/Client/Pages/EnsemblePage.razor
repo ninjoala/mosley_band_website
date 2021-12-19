@@ -4,17 +4,14 @@
 
 @if (!Loading)
 {
-    <h1>@EnsembleName</h1>
-
-    <p>@Blurb</p>
-
-    <article>@Article</article>
-
-    <p>@PicturePath</p>
-}
-
-@*<img src=@PicturePath />
-*@
-@code {
-
+    <div class="ensemble-page-wrapper">
+        <p>@Blurb</p>
+        <h2 class="ensemble-page-article-header">@Header</h2>
+        <div class="ensemble-page-picture-wrapper">
+            <img class="ensemble-page-picture" src=@PicturePath />
+            <article class="ensemble-page-article-content">
+                @Article
+            </article>
+        </div>
+    </div>
 }
