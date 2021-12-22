@@ -25,6 +25,12 @@
     padding-bottom: 10rem;
 }
 
+@media (max-width: 400px) {
+    .big-grid {
+        padding-inline: 1rem;
+    }
+}
+
 @media (max-width: 1430px) {
     .big-grid {
         grid-template-columns: 1fr 1fr;

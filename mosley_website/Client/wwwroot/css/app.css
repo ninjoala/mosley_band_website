@@ -52,6 +52,12 @@ body {
     margin-bottom: 1rem;
 }
 
+@media only screen and (max-width: 400px) {
+    .generic-banner-wrapper {
+        padding-inline: 1rem;
+    }
+}
+
 .generic-banner {
     display: flex;
     justify-content: space-between;
@@ -138,6 +144,12 @@ main {
 
 .article {
     padding-inline: 17vw;
+}
+
+@media only screen and (max-width: 400px) {
+    .article {
+        padding-inline: 1rem;
+    }
 }
 
 .article-wrapper {
