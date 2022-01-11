@@ -16,20 +16,13 @@ h1 {
 .coming-soon > * {
     align-self: center;
     color: #D8C973;
+    font-size: clamp(1rem, 2rem, 8vw);
 }
 
 .coming-soon > h1 {
-    font-size: 4rem;
+    font-size: clamp(2rem, 4rem, 8vw);
     align-self: center;
     justify-self: center;
-}
-
-.coming-soon > div {
-    font-size: 2rem;
-}
-
-.coming-soon > span {
-    font-size: 2rem;
 }
 
 .coming-soon > img {
