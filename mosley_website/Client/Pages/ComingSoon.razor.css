@@ -4,9 +4,9 @@
     flex-direction: column;
     align-self: center;
     height: 100vh;
-    background-color: var(--bg-primary);
+    background-color: #42413f;
     gap: 1.5rem;
-    font-family: 'Miriam Libre', sans-serif;
+    font-family: 'Cinzel', serif;
 }
 
 h1 {
@@ -15,7 +15,7 @@ h1 {
 
 .coming-soon > * {
     align-self: center;
-    color: hsl(73, 43%, 59%);
+    color: #D8C973;
 }
 
 .coming-soon > h1 {
@@ -35,4 +35,3 @@ h1 {
 .coming-soon > img {
     max-width: clamp(250px, 80vw, 500px);
 }
-
