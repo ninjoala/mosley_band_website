@@ -371,6 +371,24 @@ h2 {
     font-family: 'Bebas Neue', cursive;
 }
 
+.calendar {
+    border: 0;
+    width: clamp(325px, 80vw, 600px);
+    aspect-ratio: 8 / 8;
+    align-self: center;
+}
+
+.calendar-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.calendar-header {
+    align-self: center;
+}
+
 
 
 /* Small screens */
