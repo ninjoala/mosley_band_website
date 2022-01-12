@@ -20,13 +20,13 @@ jobs:
       run: dotnet restore
     - name: Build
       run: |
-        dotnet build --configuration Release --no-restore
-        dotnet publish -c Release 
+        dotnet build --configuration Debug --no-restore
+        dotnet publish -c Debug 
 
     - name: Copy via ssh
       uses: garygrossgarten/github-action-scp@v0.5.3
       with:
-        local: /home/runner/work/mosley_website/mosley_website/mosley_website/Server/bin/Debug/net6.0/
+        local: /home/runner/work/mosley_website/mosley_website/mosley_website/Server/bin/Debug/net6.0/publish
         remote: ${{ secrets.DEV_REMOTE_TARGET }}
         host: ${{ secrets.REMOTE_HOST }}
         username: ${{ secrets.REMOTE_USER }}
