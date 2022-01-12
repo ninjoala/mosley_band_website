@@ -72,7 +72,6 @@ as well as Solo and Ensemble.";
 
         protected override async Task OnInitializedAsync()
         {
-            await PageLoad.InvokeAsync();
             await base.OnInitializedAsync();
             Loading = false;
         }
