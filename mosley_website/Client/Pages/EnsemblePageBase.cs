@@ -62,9 +62,9 @@ middle schools, universities, and other independent organizations. The Mosley Co
 “Sound of the Southland'' Marching Band at all football games as well as other scheduled competitions and parades,
 as well as Solo and Ensemble.";
 
-        public const string SotslPicturePath = "images/sotsl.jpg";
-        public const string SymphonyBandPicturePath = "images/sotsl.jpg";
-        public const string SymphonicBandPicturePath = "images/sotsl.jpg";
+        public const string SotslPicturePath = "images/register.jpg";
+        public const string SymphonyBandPicturePath = "images/register.jpg";
+        public const string SymphonicBandPicturePath = "images/register.jpg";
         public const string JazzEnsemblePicturePath = "images/jazz_ensemble.jpg";
         public const string PercussionPicturePath = "images/percussion_ensemble.jpg";
         public const string ColorguardPicturePath = "images/colorguard_ensemble.jpg";
