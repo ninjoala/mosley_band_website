@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,7 +6,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -36,9 +35,11 @@ app.UseStaticFiles(new StaticFileOptions()
 
 app.UseRouting();
 
-
-app.MapRazorPages();
-app.MapControllers();
-app.MapFallbackToFile("index.html");
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapRazorPages();
+    endpoints.MapControllers();
+    endpoints.MapFallbackToPage("/_Host");
+});
 
 app.Run();

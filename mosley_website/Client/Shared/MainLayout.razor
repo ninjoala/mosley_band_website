@@ -1,31 +1,37 @@
 ﻿@inherits LayoutComponentBase
 @inject NavigationManager NavigationManager
-
+@using System.Collections
 @using mosley_website.Client.Pages;
 
-    <CascadingValue Value="this">
-        <CascadingValue Value="IsAuthorized">
-        <body>
-            @if (IsAuthorized)
-            {
-                <NavMenu />
-            }
+<CascadingValue Value="this">
+    <CascadingValue Value="IsAuthorized">
+        @if (!IsAuthorized)
+        {
+            <ComingSoon />
+        }
+        else
+        {
+            <NavMenu />
+
             <main>
                 @Body
             </main>
-        </body>
-        </CascadingValue>
+        }
     </CascadingValue>
+</CascadingValue>
 
 
 
 @code {
+    [CascadingParameter]
+    public string Environment { get; set; }
+
     public bool IsAuthorized { get; set; }
 
     public void Authorize()
     {
         IsAuthorized = true;
-        if(IsAuthorized)
+        if (IsAuthorized)
         {
             NavigationManager.NavigateTo("/");
         }
