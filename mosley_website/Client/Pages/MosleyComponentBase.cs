@@ -7,10 +7,16 @@ namespace mosley_website.Client.Pages
     {
         [CascadingParameter]
         public EventCallback PageLoad { get; set; }
+
         [CascadingParameter]
         public bool IsAuthorized { get; set; }
+
+        [CascadingParameter]
+        public EventCallback LoginButtonPress { get; set; }
+
         [Inject]
         public NavigationManager NavigationManager { get; set; }
+
         protected override async Task OnInitializedAsync()
         {
             if (!IsAuthorized)
@@ -19,6 +25,11 @@ namespace mosley_website.Client.Pages
             }
             await PageLoad.InvokeAsync();
             await base.OnInitializedAsync();
+        }
+
+        public async Task Login()
+        {
+            await LoginButtonPress.InvokeAsync();
         }
     }
 }
