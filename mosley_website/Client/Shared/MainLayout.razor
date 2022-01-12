@@ -2,10 +2,20 @@
 @inject NavigationManager MyNavigationManager
 
 @using mosley_website.Client.Pages;
-<body>
-    <NavMenu />
-    <main>
-        @Body
-    </main>    
-</body>
 
+<CascadingValue Value="IsAuthorized">
+    <body>
+        @if (IsAuthorized)
+        {
+            <NavMenu />
+        }
+        <main>
+            @Body
+        </main>
+    </body>
+</CascadingValue>
+
+
+@code {
+    public bool IsAuthorized { get; set; }
+}
