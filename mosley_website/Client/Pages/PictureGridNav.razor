@@ -1,46 +1,76 @@
-﻿<div class="big-grid">
+﻿@inject NavigationManager NavigationManager
+
+<div class="big-grid">
 
     <div class="container">
         <img class="img-thing" src="/images/white_bg_credit_card.png" width="80">
         <h2 class="title">Donations</h2>
         <img class="blur shadow grid-img" src="images/donation.jpg" alt=''>
-        <button class="end-center generic-banner-button-wrapper">Details</button>
+        <button class="end-center generic-banner-button-wrapper" @onclick=GotoDonations>Details</button>
     </div>
 
     <div class="container">
         <img class="img-thing" src="/images/white_calendar.png" width="80">
         <h2 class="title">Calendar</h2>
         <img class="blur shadow grid-img" src="images/calendar.jpg" alt=''>
-        <button class="end-center generic-banner-button-wrapper">Details</button>
+        <button class="end-center generic-banner-button-wrapper" @onclick=GotoCalendar>Details</button>
     </div>
 
     <div class="container">
         <img class="img-thing" src="/images/white_clipboard.png" width="80">
         <h2 class="title">Register</h2>
         <img class="blur shadow grid-img" src="images/register_2.jpg" alt=''>
-        <button class="end-center generic-banner-button-wrapper">Details</button>
+        <button class="end-center generic-banner-button-wrapper" @onclick=GotoRegister>Details</button>
     </div>
 
     <div class="container">
         <img class="img-thing" src="/images/white_hand_heart.png" width="80">
         <h2 class="title">Boosters</h2>
         <img class="blur shadow grid-img" src="images/boosters.jpg" alt=''>
-        <button class="end-center generic-banner-button-wrapper">Details</button>
+        <button class="end-center generic-banner-button-wrapper" @onclick=GotoBoosters>Details</button>
     </div>
 
     <div class="container">
         <img class="img-thing" src="/images/white_bg_staff.png" width="80">
         <h2 class="title">Meet The Staff</h2>
         <img class="blur shadow grid-img" src="images/meet_the_staff.jpg" alt=''>
-        <button class="end-center generic-banner-button-wrapper">Details</button>
+        <button class="end-center generic-banner-button-wrapper" @onclick=GotoMeetTheStaff>Details</button>
     </div>
 
     <div class="container">
         <img class="img-thing" src="/images/white_bg_grad_cap.png" width="80">
         <h2 class="title">College Bands</h2>
         <img class="blur shadow grid-img" src="images/college_bands.jpg" alt=''>
-        <button class="end-center generic-banner-button-wrapper">Details</button>
+        <button class="end-center generic-banner-button-wrapper" @onclick=GotoCollegeBands>Details</button>
     </div>
 
 
 </div>
+
+@code {
+    public void GotoDonations()
+    {
+        NavigationManager.NavigateTo("https://snap-raise.com/v2/fundraisers/a-crawford-mosley-hs-band-drive-2021#/");
+    }
+
+    public void GotoCalendar()
+    {
+        NavigationManager.NavigateTo("/Calendar");
+    }
+    public void GotoRegister()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+    public void GotoBoosters()
+    {
+        NavigationManager.NavigateTo("/Boosters");
+    }
+    public void GotoMeetTheStaff()
+    {
+        NavigationManager.NavigateTo("/Staff");
+    }
+    public void GotoCollegeBands()
+    {
+        NavigationManager.NavigateTo("/College");
+    }
+}
