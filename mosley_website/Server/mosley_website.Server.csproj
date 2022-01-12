@@ -9,6 +9,7 @@
 		<InvariantGlobalization>true</InvariantGlobalization>
 		<BlazorWebAssemblyPreserveCollationData>false</BlazorWebAssemblyPreserveCollationData>
 		<PublishTrimmed>true</PublishTrimmed>
+		<RuntimeIdentifier>linux-x64</RuntimeIdentifier>
 	</PropertyGroup>
 
 	<ItemGroup>
