@@ -19,10 +19,10 @@ namespace mosley_website.Client.Pages
 
         protected override async Task OnInitializedAsync()
         {
-            if (!IsAuthorized)
-            {
-                NavigationManager.NavigateTo("/ComingSoon");
-            }
+            //if (!IsAuthorized)
+            //{
+            //    NavigationManager.NavigateTo("/ComingSoon");
+            //}
             await PageLoad.InvokeAsync();
             await base.OnInitializedAsync();
         }
