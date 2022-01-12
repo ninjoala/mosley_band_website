@@ -14,6 +14,9 @@
 
 @code {
     [CascadingParameter]
+    public bool IsAuthorized { get; set; }
+
+    [CascadingParameter]
     public MainLayout? Layout { get; set; }
 
     public string? PasswordEntry { get; set; }

@@ -36,17 +36,9 @@
     </div>
 </div>
 
-
 <PictureGridNav />
 
-
-
 @code {
-    [Parameter]
-    public EventCallback TestEventCallback { get; set; }
-    [Inject]
-    public NavigationManager NavigationManager { get; set; }
-
     public void NavigateToSupport()
     {
         NavigationManager.NavigateTo("https://snap-raise.com/v2/fundraisers/a-crawford-mosley-hs-band-drive-2021#/");
