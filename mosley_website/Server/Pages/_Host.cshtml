@@ -33,6 +33,11 @@
         <button class="dismiss">🗙</button>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
+      <script>
+	      document.addEventListener("DOMContentLoaded", function() {
+		    setTimeout(function() { Blazor.start(); },200);
+	    });
+      </script>
 </body>
 
 </html>
