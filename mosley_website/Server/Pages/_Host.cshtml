@@ -14,8 +14,8 @@
     <meta name="description" content="The Mosley Band Programs is a group of award winning marching and concert bands located in Panama City, Florida. Mosley Bands is dedicated to producing quality musicians and strives to develop youth who will go on to be vigilant leaders in their lives.">
     <title>Mosley Bands</title>
     <base href="/" />
-    <link href="css/app.css" rel="stylesheet" />
-    <link href="mosley_website.Client.styles.css" rel="stylesheet" />
+    <link href="css/app.css" rel="preload" as="style" />
+    <link href="mosley_website.Client.styles.css" rel="preload" as="style" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&display=swap" rel="stylesheet">
@@ -32,13 +32,12 @@
         <a href="/" class="reload">Reload</a>
         <button class="dismiss">🗙</button>
     </div>
-    <script src="_framework/blazor.webassembly.js"></script>
-      <script>
-	      document.addEventListener("DOMContentLoaded", function() {
-		    setTimeout(function() { Blazor.start(); },200);
-	    });
-      </script>
-</body>
+  <script src="_framework/blazor.webassembly.js" defer autostart="false"></script>
+  <script>
+	  document.addEventListener("DOMContentLoaded", function() {
+		setTimeout(function() { Blazor.start(); },1200);
+	});
+  </script></body>
 
 </html>
 
