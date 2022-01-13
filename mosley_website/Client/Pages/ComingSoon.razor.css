@@ -26,8 +26,8 @@ h1 {
 }
 
 .coming-soon > img {
-    max-width: clamp(250px, 80vw, 500px);
-}
+/*    max-width: clamp(250px, 80vw, 500px);
+*/}
 
 .login-button {
     color: black;
