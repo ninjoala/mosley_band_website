@@ -9,9 +9,9 @@ namespace mosley_website.Client.Pages
         [Inject]
         public NavigationManager NavigationManager { get; set; }
 
-        protected override async Task OnInitializedAsync()
+        protected override void OnInitialized()
         {
-            await base.OnInitializedAsync();
+            base.OnInitialized();
         }
     }
 }
