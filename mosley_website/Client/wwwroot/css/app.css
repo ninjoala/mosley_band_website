@@ -76,6 +76,8 @@ body {
     padding-bottom: 0.5rem;
     transition: background-color var(--transition-speed);
     cursor: pointer;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 button.generic-banner-button-wrapper {
@@ -129,6 +131,7 @@ button {
 
 main {
     background-color: white;
+    width: 100vw;
 }
 
 .article {
@@ -353,6 +356,13 @@ article {
     padding-top: 1rem;
 }
 
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-family: 'Bebas Neue', cursive;
+}
+
 h2 {
     font-size: 3.5rem;
     margin-bottom: 0.25rem;
@@ -362,7 +372,7 @@ h2 {
 
 .calendar {
     border: 0;
-    width: clamp(325px, 80vw, 600px);
+    width: clamp(325px, 80vw, 700px);
     aspect-ratio: 8 / 8;
     align-self: center;
 }
@@ -374,9 +384,11 @@ h2 {
     align-content: center;
 }
 
-.calendar-header {
+.calendar-wrapper > h1 {
     align-self: center;
 }
+
+
 
 
 
