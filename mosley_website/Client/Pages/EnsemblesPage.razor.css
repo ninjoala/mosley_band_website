@@ -21,6 +21,7 @@
     bottom: 10px;
     cursor: pointer;
     width: 50px;
+    display: block;
     height: 50px;
     background-color: var(--color-primary);
     text-indent: -9999px;

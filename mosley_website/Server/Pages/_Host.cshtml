@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com">
     <link href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&display=swap">
+    <script src="/js/site.js"></script>
 
 
 
@@ -48,28 +49,12 @@
         };
     </script>
 
-            <script src="_framework/blazor.webassembly.js"></script>
-
-
-    <script>
-        const scrollTop = document.getElementById('scrollTop');
-
-
-          window.onscroll = () => {
-              if (window.scrollY > 300) {
-                scrollTop.style.display = "block";
-                scrollTop.style.opacity = 1;
-                console.log("show");
-              } else {
-                scrollTop.style.display = "none";
-                scrollTop.style.opacity = 0;
-                console.log("hide");
-              }
-            };
-
-    </script>
-
-
+    <script src="_framework/blazor.webassembly.js" defer></script>
+@*    <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() { Blazor.start(); },200);
+        });
+    </script>*@
 </body>
 </html>
 

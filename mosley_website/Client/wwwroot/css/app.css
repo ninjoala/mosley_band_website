@@ -21,20 +21,18 @@ body {
     padding: 0;
 }
 
-
-#home-banner {
-    object-fit: contain;
-    background-repeat: no-repeat;
+.page-banner {
     width: 100%;
+}
+
+.page-banner > img {
+    max-width: 100%;
+    height: auto;
     padding-bottom: 1rem;
     border-bottom: solid;
     border-color: var(--color-secondary);
-    position: relative;
-}
-
-.page-banner {
-    width: 100vw;
-}
+/*    position: relative;
+*/}
 
 .generic-banner-wrapper {
     position: relative;
@@ -192,7 +190,7 @@ article {
     padding-left: 5rem;
     padding-right: 5rem;
     border-bottom: 1px solid black;
-    background-color: var(--color-primary)
+    background-color: var(--color-primary);
 }
 
 .navbar-nav {
