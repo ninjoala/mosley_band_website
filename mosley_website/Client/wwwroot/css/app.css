@@ -131,10 +131,7 @@ button {
     padding-bottom: 2rem;
 }*/
 
-main {
-    background-color: white;
-    width: 100vw;
-}
+
 
 .article {
     padding-inline: 17vw;
@@ -392,6 +389,9 @@ h2 {
 
 
 
+main {
+    background-color: white;
+}
 
 
 /* Small screens */
@@ -418,6 +418,7 @@ h2 {
     main {
         margin: 0;
     }
+
 
     .article-grid {
         grid-template-columns: 1fr
