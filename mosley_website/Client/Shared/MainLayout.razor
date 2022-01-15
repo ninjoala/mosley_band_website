@@ -13,9 +13,11 @@
         {
             <NavMenu/>
 
-            <main>
+            <main class="site-content">
                 @Body
             </main>
+
+            <NintechFooter />
         }
     </CascadingValue>
 </CascadingValue>
@@ -26,7 +28,7 @@
     [CascadingParameter]
     public string Environment { get; set; }
 
-    public bool IsAuthorized { get; set; }
+    public bool IsAuthorized { get; set; } = true;
 
     public void Authorize()
     {

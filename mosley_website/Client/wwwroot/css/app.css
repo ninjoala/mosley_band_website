@@ -10,6 +10,16 @@
     --navbar-height: 3.5rem;
 }
 
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.site-content {
+    flex: 1;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -374,6 +384,7 @@ h2 {
     width: clamp(325px, 80vw, 700px);
     aspect-ratio: 8 / 8;
     align-self: center;
+    margin-bottom: 2rem;
 }
 
 .calendar-wrapper {

@@ -32,9 +32,9 @@
 
     <div class="container">
         <img class="img-thing" src="/images/white_bg_staff.png" width="80" alt="small white icon of a group of people, cartoonized">
-        <h2 class="title">Meet The Staff</h2>
+        <h2 class="title">Ensembles</h2>
         <img class="blur shadow grid-img" src="images/meet_the_staff.jpg" alt="Mosley band right before a performance, gathered around the band director">
-        <button class="end-center generic-banner-button-wrapper" @onclick=GotoMeetTheStaff>Details</button>
+        <button class="end-center generic-banner-button-wrapper" @onclick=GoToEnsembles>Details</button>
     </div>
 
     <div class="container">
@@ -72,5 +72,9 @@
     public void GotoCollegeBands()
     {
         NavigationManager.NavigateTo("/College");
+    }
+    public void GoToEnsembles()
+    {
+        NavigationManager.NavigateTo("/Ensembles");
     }
 }
