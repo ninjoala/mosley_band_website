@@ -5,13 +5,27 @@
 
 <CascadingValue Value="this">
     <CascadingValue Value="IsAuthorized">
-        @if (!IsAuthorized)
+
+        @if (Environment == "Development" || Environment == "Staging")
         {
-            <ComingSoon />
+            @if (!IsAuthorized)
+            {
+                <ComingSoon />
+            }
+            else
+            {
+                <NavMenu />
+
+                <main class="site-content">
+                    @Body
+                </main>
+
+                <NintechFooter />
+            }
         }
         else
         {
-            <NavMenu/>
+            <NavMenu />
 
             <main class="site-content">
                 @Body
@@ -19,6 +33,7 @@
 
             <NintechFooter />
         }
+
     </CascadingValue>
 </CascadingValue>
 
