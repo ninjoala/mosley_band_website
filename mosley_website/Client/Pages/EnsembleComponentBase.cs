@@ -2,7 +2,7 @@
 
 namespace mosley_website.Client.Pages
 {
-    public class EnsemblePageBase : MosleyComponentBase
+    public class EnsembleComponentBase : ComponentBase
     {
         [Parameter]
         public string? EnsembleName { get; set; }
@@ -13,31 +13,14 @@ namespace mosley_website.Client.Pages
         
         public bool Loading { get; set; }
 
-        public const string Sotsl = "Sound of the Southland";
-        public const string SymphonyBand = "Symphony Band";
-        public const string SymphonicBand = "Symphonic Band";
-        public const string JazzEnsemble = "Jazz Ensemble";
-        public const string Percussion = "Percussion";
-        public const string Colorguard = "Colorguard";
+        public const string SotslHeader = "Sound of the Southland";
+        public const string SymphonyBandHeader = "Symphony Band";
+        public const string SymphonicBandHeader = "Symphonic Band";
+        public const string JazzEnsembleHeader = "Jazz Ensemble";
+        public const string PercussionHeader = "Percussion";
+        public const string ColorguardHeader = "Colorguard";
 
-        public const string SotslBlurb = @"ENSEMBLES & COURSE POLICIES: Students must maintain a 2.0 cumulative GPA to fully 
-participate in all band activities. 
-All ensembles and courses are full-year commitments unless otherwise noted.";
-        public const string SymphonyBandBlurb = @"ENSEMBLES & COURSE POLICIES: Students must maintain a 2.0 cumulative GPA to fully 
-participate in all band activities. 
-All ensembles and courses are full-year commitments unless otherwise noted.";
-        public const string SymphonicBandBlurb = @"ENSEMBLES & COURSE POLICIES: Students must maintain a 2.0 cumulative GPA to fully 
-participate in all band activities. 
-All ensembles and courses are full-year commitments unless otherwise noted.";
-        public const string JazzEnsembleBlurb = @"ENSEMBLES & COURSE POLICIES: Students must maintain a 2.0 cumulative GPA to fully 
-participate in all band activities. 
-All ensembles and courses are full-year commitments unless otherwise noted.";
-        public const string PercussionBlurb = @"ENSEMBLES & COURSE POLICIES: Students must maintain a 2.0 cumulative GPA to fully 
-participate in all band activities. 
-All ensembles and courses are full-year commitments unless otherwise noted.";
-        public const string ColorguardBlurb = @"ENSEMBLES & COURSE POLICIES: Students must maintain a 2.0 cumulative GPA to fully 
-participate in all band activities. 
-All ensembles and courses are full-year commitments unless otherwise noted.";
+
 
         public const string SotslArticle = @"Founded in 1974, the “Sound of the Southland” (SOTSL) serves as the marching band 
 within the Mosley Band Program. The SOTSL performs regularly for all football home and away games, community parades, 
@@ -62,9 +45,9 @@ middle schools, universities, and other independent organizations. The Mosley Co
 “Sound of the Southland'' Marching Band at all football games as well as other scheduled competitions and parades,
 as well as Solo and Ensemble.";
 
-        public const string SotslPicturePath = "images/register.jpg";
-        public const string SymphonyBandPicturePath = "images/register.jpg";
-        public const string SymphonicBandPicturePath = "images/register.jpg";
+        public const string SotslPicturePath = "images/sotsl.jpg";
+        public const string SymphonyBandPicturePath = "images/symphony-band.jpg";
+        public const string SymphonicBandPicturePath = "images/symphonic-band.jpg";
         public const string JazzEnsemblePicturePath = "images/jazz_ensemble.jpg";
         public const string PercussionPicturePath = "images/percussion_ensemble.jpg";
         public const string ColorguardPicturePath = "images/colorguard_ensemble.jpg";
@@ -86,38 +69,32 @@ as well as Solo and Ensemble.";
             switch (EnsembleName)
             {
                 case "Sotsl":
-                    Header = Sotsl;
-                    Blurb = SotslBlurb;
+                    Header = SotslHeader;
                     Article = SotslArticle;
                     PicturePath = SotslPicturePath;
                     break;
                 case "SymphonyBand":
-                    Header = SymphonyBand;
-                    Blurb = SymphonyBandBlurb;
+                    Header = SymphonyBandHeader;
                     Article = SymphonyBandArticle;
                     PicturePath = SymphonyBandPicturePath;
                     break;
                 case "SymphonicBand":
-                    Header = SymphonicBand;
-                    Blurb = SymphonicBandBlurb;
+                    Header = SymphonicBandHeader;
                     Article = SymphonicBandArticle;
                     PicturePath = SymphonicBandPicturePath;
                     break;
                 case "Jazz":
-                    Header = JazzEnsemble;
-                    Blurb = JazzEnsembleBlurb;
+                    Header = JazzEnsembleHeader;
                     Article = JazzEnsembleArticle;
                     PicturePath = JazzEnsemblePicturePath;
                     break;
                 case "Percussion":
-                    Header = Percussion;
-                    Blurb = PercussionBlurb;
+                    Header = PercussionHeader;
                     Article = PercussionArticle;
                     PicturePath = PercussionPicturePath;
                     break;
                 case "Colorguard":
-                    Header = Colorguard;
-                    Blurb = ColorguardBlurb;
+                    Header = ColorguardHeader;
                     Article = ColorguardArticle;
                     PicturePath = ColorguardPicturePath;
                     break;

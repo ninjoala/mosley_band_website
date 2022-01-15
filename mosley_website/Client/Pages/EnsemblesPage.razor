@@ -1,0 +1,53 @@
+﻿@page "/Ensembles"
+@inject IJSRuntime _jsRuntime
+@inject NavigationManager _navManager
+@inherits MosleyComponentBase
+@using mosley_website.Client.Extensions
+
+<div class="ensembles-page-wrapper">
+    <div>
+        ENSEMBLES & COURSE POLICIES: Students must maintain a 2.0 cumulative GPA to fully
+        participate in all band activities.
+        All ensembles and courses are full-year commitments unless otherwise noted.
+    </div>
+
+    <article id="sotsl">
+        <EnsembleComponent EnsembleName="Sotsl" />
+    </article>
+
+    <article id="SymphonyBand">
+        <EnsembleComponent EnsembleName="SymphonyBand" />
+    </article>
+
+    <article id="SymphonicBand">
+        <EnsembleComponent EnsembleName="SymphonicBand" />
+    </article>
+
+    <article id="Jazz">
+        <EnsembleComponent EnsembleName="Jazz" />
+
+    </article>
+
+    <article id="Percussion">
+        <EnsembleComponent EnsembleName="Percussion" />
+
+    </article>
+
+    <article id="Colorguard">
+        <EnsembleComponent EnsembleName="Colorguard" />
+    </article>
+
+    <a href="/Ensembles#top" id="scrollTop"><span></span></a>
+</div>
+
+
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await _navManager.NavigateToFragmentAsync(_jsRuntime);
+        }
+    }
+}
