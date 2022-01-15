@@ -47,10 +47,18 @@
 
     public void Authorize()
     {
-        IsAuthorized = true;
-        if (IsAuthorized)
+        if (Environment == "Development" || Environment == "Staging")
+        {
+            IsAuthorized = true;
+            if (IsAuthorized)
+            {
+                NavigationManager.NavigateTo("/");
+            }
+        }
+        else
         {
             NavigationManager.NavigateTo("/");
         }
+
     }
 }
