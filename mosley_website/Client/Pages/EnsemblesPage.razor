@@ -2,7 +2,6 @@
 @inject IJSRuntime _jsRuntime
 @inject NavigationManager _navManager
 @inherits MosleyComponentBase
-@using mosley_website.Client.Extensions
 
 <div class="ensembles-page-wrapper">
     <div>
@@ -43,11 +42,5 @@
 
 
 @code {
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender)
-        {
-            await _navManager.NavigateToFragmentAsync(_jsRuntime);
-        }
-    }
+
 }
