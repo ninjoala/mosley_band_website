@@ -8,8 +8,10 @@ namespace mosley_website.Client.Pages
 {
     public class MosleyComponentBase : ComponentBase, IDisposable
     {
-        [Inject] NavigationManager NavManager { get; set; }
-        [Inject] IJSRuntime JsRuntime { get; set; }
+        [Inject]
+        public NavigationManager NavManager { get; set; }
+        [Inject] 
+        public IJSRuntime JsRuntime { get; set; }
 
         protected override void OnInitialized()
         {
