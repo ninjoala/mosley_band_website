@@ -38,19 +38,13 @@ body {
 .page-banner > img {
     max-width: 100%;
     height: auto;
-    padding-bottom: 1rem;
-    border-bottom: solid;
-    border-color: var(--color-secondary);
-/*    position: relative;
-*/}
+}
 
 .generic-banner-wrapper {
     position: relative;
     height: 6rem;
     background-color: var(--color-primary);
     padding-inline: 17vw;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 400px) {
@@ -72,6 +66,7 @@ body {
     z-index: 2;
     font-size: 25px;
     font-weight: bold;
+    font-family: 'Cinzel', serif;
 }
 
 .generic-banner-button-wrapper {
@@ -90,6 +85,7 @@ body {
     cursor: pointer;
     padding-left: 1rem;
     padding-right: 1rem;
+    font-family: 'Cinzel', serif;
 }
 
 button.generic-banner-button-wrapper {
@@ -126,13 +122,20 @@ button {
 
 .home-banner-content {
     position: absolute;
-    top: 10%;
-    right: 5%;
+    top: 3%;
+    right: 3%;
     color: white;
     z-index: 10;
     font-size: 2rem;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 1500px) {
+    .home-banner-content {
+        display: none;
+    }
+}
+
 
 /*.page-header {
     display: flex;
@@ -256,6 +259,7 @@ article {
 a.nav-link {
     text-decoration: none;
     color: white;
+    font-size: 1.25rem;
 }
 
 a.nav-link.dropdown-item {
@@ -320,9 +324,6 @@ a, .btn-link {
     top: 0.5rem;
 }
 
-.carousel {
-    
-}
 
 .center {
     margin: auto;
