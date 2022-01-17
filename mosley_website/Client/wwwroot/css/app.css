@@ -45,6 +45,7 @@ body {
     height: 6rem;
     background-color: var(--color-primary);
     padding-inline: 17vw;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 
 @media only screen and (max-width: 400px) {
@@ -82,10 +83,12 @@ body {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     transition: background-color var(--transition-speed);
+    transition: outline-color var(--transition-speed);
     cursor: pointer;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     font-family: 'Cinzel', serif;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 button.generic-banner-button-wrapper {
@@ -96,6 +99,7 @@ button.generic-banner-button-wrapper {
 
 .generic-banner-button-wrapper:hover {
     background-color: whitesmoke;
+    outline-color: var(--color-secondary);
 }
 
 button.generic-banner-button-wrapper:hover {
