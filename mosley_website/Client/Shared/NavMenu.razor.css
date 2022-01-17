@@ -4,6 +4,9 @@
     z-index: 9999;
     max-width: 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 
@@ -226,17 +229,18 @@
         .hamburger-lines[data-transformed="true"] + .mobile-nav-toggle {
             position: fixed;
         }
+
+        .primary-header {
+            justify-content: normal;
+        }
+
 }
 
 .logo {
     margin: 2rem;
 }
 
-.primary-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
+
 
 .primary-navigation > li {
     display: flex;
