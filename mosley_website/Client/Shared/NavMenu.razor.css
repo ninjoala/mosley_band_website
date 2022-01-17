@@ -36,8 +36,6 @@
     transform: rotate(-45deg);
 }
 
-
-
 .hamburger-lines {
     display: flex;
     height: 26px;
@@ -172,6 +170,7 @@
         transition: transform 350ms ease-out;
         transition: display 350ms ease-out;
         background-color: var(--color-primary);
+        margin-top: 1.5rem;
     }
 
     .dropdown-content > a {
